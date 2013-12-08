@@ -21,7 +21,7 @@ body {
 	font-family: "museo-slab", "Helvetica Neue", Ubuntu, "WenQuanYi Micro Hei", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Arial, sans-serif;
 	-webkit-font-smoothing:antialiased;
 	line-height: 1.7em;
-	font-size: 1em;
+	font-size: 12px;
 	text-shadow: 0 0 1px rgba(255,255,255,0.1);
 	background: #fff;
 }
@@ -174,7 +174,7 @@ header, footer, .center, #logo, .centers li {
 .border-t-s {
 	border-top: 1px solid #ddd;
 }
-a, input, select, blockquote, .typekit-badge, #backTop, span.sup  {
+a, input, select, blockquote, .typekit-badge, #backTop, span.sup, #clock  {
 	-webkit-transition: all .3s;
 	-moz-transition: all .3s;
 	-o-transition: all .3s;
@@ -282,18 +282,22 @@ body>ul>li#Explanation pre {
 }
 #Explanation #clock {
 	position: absolute;
-	width: 24px;
-	height: 24px;
-	line-height: 24px;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
 	background: url(close.svg) #444 center center no-repeat;
-	background-size: 20px;
+	background-size: 12px;
 	color: #fff;
 	top: 2px;
 	right: 2px;
-	border-radius: 12px;
+	border-radius: 8px;
 	font-size: 12px;
 	text-align: center;
 	cursor: pointer;
+	opacity: 0;
+}
+#Explanation:hover #clock {
+	opacity: 1;
 }
 
 body.exp #Main {
